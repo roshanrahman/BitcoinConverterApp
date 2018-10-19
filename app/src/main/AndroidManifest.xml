@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ChooseCurrency" />
-        <activity android:name=".DisplayActivity"></activity>
+        <activity android:name=".DisplayActivity"
+            android:parentActivityName=".ChooseCurrency"></activity>
     </application>
 
 </manifest>

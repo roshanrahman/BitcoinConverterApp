@@ -28,6 +28,7 @@ public class DisplayActivity extends AppCompatActivity {
         setContentView(R.layout.activity_display);
         selectedCurrency = getIntent().getStringExtra("selectedCurrency");
         getSupportActionBar().setTitle("Conversion rate");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         loadingIndicator = findViewById(R.id.loadingIndicator);
         valueDisplayTextView = findViewById(R.id.valueDisplay);
         display = findViewById(R.id.display);
