@@ -1,5 +1,6 @@
 package com.example.roshan.bitcoinproject;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -21,6 +22,13 @@ public class DisplayActivity extends AppCompatActivity {
     String selectedCurrency;
     LinearLayout loadingIndicator, display;
     TextView valueDisplayTextView, statusDisplayTextView;
+
+    @Override
+    protected void onRestart() {
+        startActivity(new Intent(DisplayActivity.this, ChooseCurrency.class));
+        finish();
+        super.onRestart();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
